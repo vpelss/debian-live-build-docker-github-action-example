@@ -12,5 +12,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: live-images
-          path: components/os-installer/dist/*
+          path: dist/*
           retention-days: 1
