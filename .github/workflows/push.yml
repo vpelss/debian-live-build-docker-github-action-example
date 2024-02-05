@@ -1,0 +1,16 @@
+name: OS Installer
+on: push
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - run: ./bin/build-iso-docker
+      - name: Upload Build Image
+        uses: actions/upload-artifact@v3
+        with:
+          name: live-images
+          path: components/os-installer/dist/*
+          retention-days: 1

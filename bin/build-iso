@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+apt update
+apt install live-build --yes
+mkdir -p build dist
+cp -r live-build/* build/
+cd build
+
+lb config
+cp -r auto ../live-build
+cp -r config ../live-build
+
+lb build
+
+ls -lah .
+#cp kydra-installer-amd64.hybrid.iso ../dist/

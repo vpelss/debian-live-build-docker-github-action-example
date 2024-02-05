@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+IMAGE=debian:bookworm
+echo "${PWD}"
+
+docker volume create live-build-cache || true
+docker run --privileged --rm --workdir /app \
+--volume live-build-cache:/app/build/cache \
+--volume ${PWD}/bin:/app/bin \
+--volume ${PWD}/dist:/app/dist \
+--volume ${PWD}/live-build:/app/live-build \
+debian:bookworm bash -c "bin/build-iso"
