@@ -13,4 +13,4 @@ cp -r config ../live-build
 lb build
 
 ls -lah .
-#cp kydra-installer-amd64.hybrid.iso ../dist/
+cp example-amd64.hybrid.iso ../dist/
