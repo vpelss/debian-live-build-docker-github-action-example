@@ -15,14 +15,15 @@ jobs:
           path: dist/*
           retention-days: 1
       - run: |
-         echo "ls -l dist"
-         ls -l dist
+         #echo "ls -l dist"
+         #ls -l dist
+         echo "ls -l"
+         ls -l 
          echo "ls -l /app"
          ls -l ../
          ls -l ../../
          ls -l ../../../         
-         echo "ls -l"
-         ls -l 
+
       - name: upload binaries to release
         uses: softprops/action-gh-release@v2
         with:
