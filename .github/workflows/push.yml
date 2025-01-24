@@ -15,7 +15,7 @@ jobs:
           path: dist/*
           retention-days: 1
       - run: |
-         - ls -l dist
+         ls -l dist
       - name: upload binaries to release
         uses: softprops/action-gh-release@v2
         with:
