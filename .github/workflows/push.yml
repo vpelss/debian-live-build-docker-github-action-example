@@ -20,5 +20,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: "try_me"
-          files: live-images 
-          path: dist/*
+          files: dist/example-amd64.hybrid.iso 
+          #path: dist/*
