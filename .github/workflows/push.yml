@@ -14,3 +14,8 @@ jobs:
           name: live-images
           path: dist/*
           retention-days: 1
+      - name: upload binaries to release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "try_me"
+          files: live-images 
