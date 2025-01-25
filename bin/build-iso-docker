@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-IMAGE=busybox
+IMAGE=debian:bookworm
 echo "${PWD}"
 
 docker volume create live-build-cache || true
