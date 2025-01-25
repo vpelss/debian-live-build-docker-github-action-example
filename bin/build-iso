@@ -12,5 +12,6 @@ cp -r config ../live-build
 
 lb build
 
+echo "ls -lah ."
 ls -lah .
 cp example.iso ../dist/
